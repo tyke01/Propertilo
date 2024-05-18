@@ -82,7 +82,7 @@ function App() {
       </SignedIn>
 
       <SignedOut>
-        <RedirectToSignIn redirectUrl={"/Dashboard"}/>
+        <RedirectToSignIn/>
       </SignedOut>
     </main>
   );
