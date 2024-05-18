@@ -4,6 +4,7 @@ import { RiNotification3Line } from "react-icons/ri";
 import { UseStateContext } from "../contexts/ContextProvider";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import UserProfile from "./UserProfile";
+import { UserButton } from "@clerk/clerk-react";
 
 const NavButton = ({ customFunc, icon, color, dotColor }) => (
   <button
@@ -79,19 +80,9 @@ const Navbar = () => {
           icon={<RiNotification3Line />}
         />
 
-        <div
-          className="flex items-center gap-2 cursor-pointer p-1 hover:bg-gray-300 rounded-md"
-          onClick={() => handleClick("userProfile")}
-        >
-          <img src="avatar-1.jpg" alt="me" className="rounded-full w-8 h-8" />
-          <p>
-            <span className="text-gray-400 text-14">Hi, </span>{" "}
-            <span className="text-gray-400  font-bold ml-1 text-14">Viki</span>
-          </p>
-          <MdKeyboardArrowDown className="text-gray-600 text-xl" />
-        </div>
-
-        {isClicked.userProfile && <UserProfile />}
+        <UserButton /> 
+{/* 
+        {isClicked.userProfile && <UserProfile />} */}
       </div>
     </div>
   );
